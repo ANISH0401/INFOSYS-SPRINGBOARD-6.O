@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SkillForge Design System - All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* SkillForge Brand Colors */
+    --skill-primary: 220 70% 50%;   /* Electric Blue */
+    --skill-primary-light: 220 80% 60%; 
+    --skill-secondary: 240 65% 55%; /* Indigo Blue */
+    --skill-accent: 200 90% 55%;   /* Aqua/Cyan */
+    --skill-success: 150 65% 45%;
+    --skill-warning: 45 100% 55%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--skill-primary)), hsl(var(--skill-secondary)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--skill-accent)), hsl(var(--skill-primary-light)));
+
+    /* Shadows */
+    --shadow-glow: 0 10px 40px hsl(var(--skill-primary) / 0.4);
+    --shadow-card: 0 4px 25px hsl(var(--skill-accent) / 0.15);
+
+    /* Light mode (still usable if toggled) */
+    --background: 210 40% 97%;
+    --foreground: 222 47% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 12%;
+
+    --primary: 220 70% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 65% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 200 90% 55%;
+    --accent-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 222 47% 10%;       /* Deep navy base (like your screenshot) */
+    --foreground: 210 40% 96%;       /* Light gray/white text */
+
+    --card: 222 45% 12%;
+    --card-foreground: 210 40% 96%;
+
+    --primary: 220 70% 50%;          /* Bright electric blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 65% 55%;        /* Indigo variant */
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 200 90% 55%;           /* Aqua highlight */
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 222 30% 18%;
+    --muted-foreground: 220 15% 70%;
+
+    --border: 222 30% 20%;
+    --input: 222 30% 20%;
+    --ring: 220 80% 55%;
+
+    /* Sidebar */
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 220 70% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 65% 55%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 222 30% 18%;
+    --sidebar-ring: 200 90% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
